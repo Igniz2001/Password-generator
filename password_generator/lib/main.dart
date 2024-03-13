@@ -51,7 +51,7 @@ class _PasswordGeneratorState extends State<PasswordGenerator> {
     Clipboard.setData(ClipboardData(text: generatedPassword));
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('Contraseña copiada al portapapeles'),
+        content: Text('Copied to clipboard!'),
       ),
     );
   }
@@ -146,14 +146,14 @@ class _PasswordGeneratorState extends State<PasswordGenerator> {
                 onPressed: () {
                   generatePassword();
                 },
-                child: Text('Generar Contraseña'),
+                child: Text('Generate password'),
               ),
               SizedBox(height: 10.0),
               ElevatedButton(
                 onPressed: () {
                   copyToClipboard();
                 },
-                child: Text('Copiar al Portapapeles'),
+                child: Text('Copy to clipboard'),
               ),
             ],
           ),
